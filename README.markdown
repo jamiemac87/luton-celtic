@@ -1,2 +1,2 @@
-# luton-celtic
+# Luton Celtic
 Website for Luton Celtic Supporters Club
