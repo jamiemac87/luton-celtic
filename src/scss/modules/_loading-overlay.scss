@@ -1,0 +1,29 @@
+.loading-overlay {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background-color: $white;
+  z-index: z("main-content", "loading");
+  opacity: 1;
+  visibility: visible;
+
+  &.content-loaded {
+    @include animation(fadeOutHide 1.0s ease-out);
+    @include animation-fill-mode(forwards);
+  }
+}
+
+@include keyframes(fadeOutHide) {
+  0% {
+    opacity: 1;
+  }
+  99% {
+    opacity: 0;
+  }
+  100% {
+    visibility: hidden;
+    z-index: -999;
+  }
+}

@@ -4,7 +4,8 @@
   "description": "Website for Luton Celtic Supporters Club",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "gulp build-templates && gulp min-html"
   },
   "repository": {
     "type": "git",
@@ -17,7 +18,26 @@
   },
   "homepage": "https://github.com/jamiemac87/luton-celtic#readme",
   "devDependencies": {
+    "bourbon": "^4.2.7",
+    "breakpoint-sass": "^2.7.1",
+    "browser-sync": "^2.18.6",
     "gulp": "^3.9.1",
-    "gulp-gh-pages": "^0.5.4"
+    "gulp-concat": "^2.6.1",
+    "gulp-gh-pages": "^0.5.4",
+    "gulp-htmlmin": "^3.0.0",
+    "gulp-nunjucks-render": "^2.0.0",
+    "gulp-plumber": "^1.1.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^3.1.0",
+    "gulp-uglify": "^2.0.1",
+    "normalize-scss": "^6.0.0",
+    "run-sequence": "^1.2.2",
+    "susy": "^2.2.12"
+  },
+  "dependencies": {
+    "jquery": "^3.1.1",
+    "requirejs": "^2.3.2",
+    "responsive-img": "^1.0.0",
+    "simple-line-icons": "^2.4.1"
   }
 }

@@ -1,0 +1,82 @@
+//LINE ICON VARIABLES
+$simple-line-font-path: "../fonts/";
+
+//FONTS
+@import url(https://fonts.googleapis.com/css?family=Lato:400,300,300italic,700,900);
+@import url(https://fonts.googleapis.com/css?family=Old+Standard+TT:400,400italic,700);
+@import "../../node_modules/simple-line-icons/scss/simple-line-icons.scss";
+@include font-face("Florence Outline", "../fonts/florencesans-sc.outline-webfont", $file-formats: eot woff2 woff svg ttf);
+//@include font-face("Florence Shaded", "../fonts/florencesans-sc.shaded-webfont", $file-formats: eot woff2 woff svg ttf);
+
+//BASE TYPOGRAPHY
+p,
+h5,
+h4,
+h3,
+h2,
+h1 {
+  margin: 0;
+  font-family: $primary-font;
+  text-transform: uppercase;
+  color: $off-black;
+}
+
+p {
+  font-size: 14px;
+}
+
+h5 {
+  font-size: 14px;
+  font-weight: 300;
+}
+
+h4 {
+  font-size: 18px;
+  font-weight: 300;
+}
+
+h3 {
+  font-size: 22px;
+}
+
+h2 {
+  font-size: 28px;
+}
+
+h1 {
+  font-size: 28px;
+  margin-bottom: 15px;
+}
+
+@include breakpoint($small) {
+  h1 {
+    font-size: 32px;
+  }
+
+}
+
+@include breakpoint($large) {
+  h1 {
+    font-size: 42px;
+  }
+
+  p {
+    font-size: 16px;
+  }
+}
+
+.outline-font {
+  font-family: $outline-font;
+  letter-spacing: 4px;
+  word-spacing: -5px;
+
+  @include breakpoint($medium) {
+    letter-spacing: 7px;
+    word-spacing: -10px;
+  }
+}
+
+q:before,
+q:after {
+  content: "";
+}

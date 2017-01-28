@@ -1,0 +1,26 @@
+//Mixins
+@mixin jm-font($font-family: 'Helvitica, sans-serif', $font-weight: 400, $font-style: normal, $font-size: 14px) {
+  font-family: $font-family;
+  font-weight: $font-weight;
+  font-style: $font-style;
+  font-size: $font-size;
+}
+
+@mixin jm-container() {
+    @include container();
+
+    @include breakpoint($medium){
+      @include container(768px);
+    }
+
+    @include breakpoint($large){
+      @include container(992px);
+    }
+
+    @include breakpoint($x-large){
+      @include container(1200px)
+    }
+}
+
+//Placeholders
+//------------

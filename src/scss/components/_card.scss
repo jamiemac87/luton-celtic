@@ -1,0 +1,63 @@
+.card {
+  position: relative;
+  margin-bottom: 10px;
+  width: 100%;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.19);
+  border: 15px solid white;
+  background-color: white;
+  overflow: hidden;
+
+  &.default-card {
+    display: table;
+    width: 100%;
+    min-height: 200px;
+    text-align: center;
+
+    @include breakpoint($small) {
+      text-align: inherit;
+    }
+
+    @include breakpoint($medium) {
+      min-height: 300px;
+    }
+  }
+
+  &:last-of-type {
+    //margin-bottom: 0;
+
+    @include breakpoint($large){
+      margin-bottom: 10px;
+    }
+  }
+
+  &.-no-border {
+    border: none;
+  }
+}
+
+.default-card__img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  @include transform(translate(-50%, -50%));
+
+}
+
+.card__content {
+  position: relative;
+  padding: 30px 15px;
+
+  .-no-border & {
+    padding: 30px;
+  }
+
+  .default-card & {
+    display: table-cell;
+    vertical-align: middle;
+  }
+
+  @include breakpoint($small) {
+    padding: 30px;
+  }
+}

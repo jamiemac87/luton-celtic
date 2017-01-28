@@ -1,0 +1,102 @@
+.nav {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 235px;
+  min-height: 100%;
+  padding: 15px;
+  background: url('../images/menu-bg.jpg') center center no-repeat;
+  background-size: cover;
+  z-index: z("nav","base");
+
+  &.nav--is-visible + .main-content {
+    @include transform(translateX(-235px));
+  }
+
+  @include breakpoint($medium) {
+    width: 300px;
+
+    &.nav--is-visible + .main-content {
+      @include transform(translateX(-300px));
+    }
+  }
+
+  @include breakpoint($medium) {
+    display: none;
+  }
+}
+
+.nav__logo {
+  width: 50px;
+  height: auto;
+  margin-bottom: 15px;
+}
+
+.nav-list {
+  margin: 0;
+  margin-bottom: 15px;
+  padding: 0;
+  padding-bottom: 15px;
+  list-style: none;
+  border-bottom: 1px solid $green;
+}
+
+.nav-list__item {
+  display: block;
+
+  a {
+    display: inline-block;
+    margin-bottom: 13px;
+    padding-bottom: 2px;
+    font-family: $primary-font;
+    font-weight: 300;
+    font-size: 18px;
+    text-transform: uppercase;
+    color: $off-black;
+
+    &:hover,
+    &:focus,
+    &:active {
+      outline: none;
+      color: $dk-green;
+    }
+  }
+
+  &.current-menu-item {
+    a {
+      border-bottom: 1px solid $green;
+    }
+  }
+
+  &:last-of-type {
+    a {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.nav__social-links {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.social-links__link {
+  display: inline-block;
+  margin-right: 15px;
+
+  a:hover,
+  a:focus,
+  a:active {
+    outline: none;
+
+    i {
+      color: $dk-green;
+    }
+  }
+
+  i {
+    font-size: 32px;
+    color: $off-black;
+  }
+}

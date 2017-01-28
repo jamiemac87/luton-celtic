@@ -1,0 +1,53 @@
+//Check if map has nested keys and return true or false
+@function map-has-nested-keys($map, $keys...) {
+  @each $key in $keys {
+    @if not map-has-key($map, $key) {
+      @return false;
+    }
+    $map: map-get($map, $key);
+  }
+
+  @return true;
+}
+
+//Simple function to traverse & retrieve a map within a map which is used in the z function
+@function map-deep-get($map, $keys...) {
+  @each $key in $keys {
+    $map: map-get($map, $key);
+  }
+
+  @return $map;
+}
+
+//Function that traverses the $z-layers variable and returns the given layer. $z-layers found in variables.scss
+@function z($layers...) {
+  @if not map-has-nested-keys($z-layers, $layers...) {
+    @warn "No layer found for `#{inspect($layers...)}` in $z-layers map. Property omitted.";
+  }
+
+  @return map-deep-get($z-layers, $layers...);
+}
+
+//Override for bourbon transition mixin that allows transform transitions
+@mixin trans-prefix($value, $prefix: "") {
+  $slice: str-slice(inspect($value), 0, 9);
+  @if $slice == "transform" {
+    #{$prefix}transition: #{$prefix}#{$value};
+  } @else {
+    #{$prefix}transition: $value;
+  }
+}
+
+//@mixin transition($properties...) {
+//  @if length($properties) > 1 {
+//    $spec: ();
+//    @for $i from 1 through length($properties) {
+//      $spec: append($spec, nth($properties, $i), comma);
+//    }
+//  } @else {
+//    $spec: $properties;
+//  }
+//  @include trans-prefix($spec, -webkit-);
+//  @include trans-prefix($spec, -moz-);
+//  @include trans-prefix($spec);
+//}

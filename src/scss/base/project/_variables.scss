@@ -1,0 +1,47 @@
+//SUSY
+$susy: (
+  columns: 12,
+  global-box-sizing: border-box
+);
+
+//COLOURS
+$off-black: #777676;
+$white: #FBFBFB;
+$off-white: #F5F5F5;
+$dk-green: #99AF9A;
+$green: #ADCFAB;
+$lt-green: #D6E7D5;
+$gold: #FFFD98;
+$red: #E26D5A;
+
+//FONTS
+$primary-font: 'Lato', sans-serif;
+$secondary-font: 'Old Standard TT', serif;
+$outline-font: 'Florence Outline', sans-serif;
+$shaded-font: 'Florence Shaded', sans-serif;
+
+
+//BREAKPOINTS
+$small: 500px;
+$medium: 768px;
+$large: 992px;
+$x-large: 1200px;
+
+//Z LAYERS
+$z-layers: (
+  "nav": (
+          "base": 1
+  ),
+  "header": (
+          "base":     3000
+  ),
+  "footer": (
+          "base":     2000
+  ),
+  "main-content": (
+          "base":     1000,
+          "overlay":  1200,
+          "loading":  1900
+
+  )
+);

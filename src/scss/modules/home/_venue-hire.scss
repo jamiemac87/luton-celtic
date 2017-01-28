@@ -1,0 +1,55 @@
+.venue-hire-card {
+  background-color: white;
+
+  img {
+    @include filter(brightness(50%));
+
+    @include breakpoint($small) {
+      @include filter(brightness(90%));
+    }
+  }
+
+  .card__content {
+
+    @include breakpoint($small) {
+      width: 70%;
+      text-align: right;
+    }
+
+    @include breakpoint($medium) {
+      width: 60%;
+    }
+
+    @include breakpoint($large) {
+      width: 50%;
+    }
+
+  }
+
+  .card__content-title {
+    display: inline-block;
+    padding-bottom: 10px;
+    border-bottom: 5px solid white;
+    color: white;
+  }
+
+  .card__content-copy {
+    margin-bottom: 15px;
+    font-weight: 300;
+    color: white;
+    line-height: 20px;
+    letter-spacing: 1px;
+    font-family: $secondary-font;
+    font-style: italic;
+    font-weight: 300;
+  }
+
+  .card__content-btn {
+    color: white;
+
+    &:hover {
+      background-color: $off-white;
+      color: black;
+    }
+  }
+}

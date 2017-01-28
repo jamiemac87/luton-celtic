@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Luton Celtic Supporters Club</title>
+
+    <script src="./js/vendor/require.js" data-main="./js/client/init"></script>
+    <link rel="stylesheet" href="./css/main.css">
+</head>
+<body>
+<section class="main-content">
+    <header class="header">
+        {# Logo #}
+        <div class="header__logo-wrapper">
+        </div>
+
+        {# menu link -- <992px Only#}
+        <div class="menu-icon__outer-wrapper" onclick="">
+            <div class="menu-icon__inner-wrapper">
+                <div class="menu-icon__open">
+                    <h5>
+                        <span class="icon-arrow-left"></span>
+                        menu
+                    </h5>
+                </div>
+
+                <div class="menu-icon__close">
+                    <h5>
+                        close
+                        <span class="icon-arrow-right"></span>
+                    </h5>
+                </div>
+            </div>
+        </div>
+
+
+        <ul class="nav-list">
+            <li class="nav-list__item">
+                <a href="">Test</a>
+            </li>
+        </ul>
+
+        <ul class="nav__social-links">
+            <li class="social-links__link">
+                <a href=""><i class="icon-social-facebook"></i></a>
+            </li>
+            <li class="social-links__link">
+                <a href=""><i class="icon-social-twitter"></i></a>
+            </li>
+            <li class="social-links__link">
+                <a href=""><i class="icon-social-instagram"></i></a>
+            </li>
+        </ul>
+    </header>
+
+    <section class="content-wrapper">
+        {% block content %} {% endblock %}
+    </section>
+
+    <footer class="footer"></footer>
+
+    <div class="main-content__overlay"></div>
+</section>
+<script src="./js/vendor/responsive-img.min.js"></script>
+</body>
+</html>

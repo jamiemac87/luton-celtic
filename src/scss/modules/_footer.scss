@@ -1,0 +1,46 @@
+footer {
+  position: relative;
+  display: table;
+  margin: 0;
+  width: 100%;
+  min-height: 80px;
+  padding: 15px;
+  text-align: center;
+  box-shadow: 0 -3px 6px rgba(0, 0, 0, 0.16);
+  background-color: white;
+  z-index: z("footer","base");
+  @include clearfix();
+
+  @include breakpoint($large) {
+    padding: 15px;
+  }
+}
+
+.footer__quote,
+.footer__est{
+  margin-bottom: 5px;
+  display: inline-block;
+  font-family: $secondary-font;
+  font-size: 14px;
+  font-style: italic;
+  font-weight: 300;
+  color: $off-black;
+}
+
+.footer__est {
+  margin-bottom: 10px;
+}
+
+.footer__social-links {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  .social-links__link {
+    margin-right: 10px;
+  }
+
+  .social-links__link i {
+    font-size: 22px;
+  }
+}
