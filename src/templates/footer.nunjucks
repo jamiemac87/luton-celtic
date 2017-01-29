@@ -1,0 +1,13 @@
+<footer class="footer">
+    <q class="footer__quote">&ldquo;A club like no other&rdquo;</q>
+
+    <hr>
+
+    <p class="footer__est">est 1966</p>
+
+    <ul class="footer__social-links">
+        <li class="social-links__link">
+            <a href="https://www.facebook.com/luton.celtic" target="_blank"><i class="icon-social-facebook"></i></a>
+        </li>
+    </ul>
+</footer>

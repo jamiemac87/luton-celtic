@@ -1,13 +1,22 @@
 'use strict';
 define(['jquery', 'events'], function ($, Events) {
-  var _header, _nav;
+  var _header, _nav, _mobileMenuToggleBtn;
 
   var init = function () {
     _header = $('header').length > 0 ? $('header') : null;
     _nav = $('.nav').length > 0 ? $('.nav') : null;
+    _mobileMenuToggleBtn = $('.menu-icon__outer-wrapper').length > 0 ? $('.menu-icon__outer-wrapper') : null;
 
     _nav == null ? console.error('nav not found') : '';
     _header == null ? console.error('header not found') : '';
+
+    _setupEventHooks();
+  };
+
+  var _setupEventHooks = function () {
+    $(_mobileMenuToggleBtn).on('click', function () {
+      toggleMenu();
+    });
   };
 
   var _openMenu = function () {
@@ -17,6 +26,7 @@ define(['jquery', 'events'], function ($, Events) {
   };
 
   var _closeMenu = function () {
+    $(document).trigger(Events.CLOSE_MENU);
     _header && _header.find('.menu-icon__inner-wrapper').removeClass('animate-icon');
     _nav && _nav.removeClass('nav--is-visible');
   };

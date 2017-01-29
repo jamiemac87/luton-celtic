@@ -1,0 +1,34 @@
+<header class="header">
+    {# Logo #}
+    <img class="header__logo-wrapper" src="./img/badge.svg" alt="L.C.S.C">
+
+    {# menu link -- <992px Only#}
+    <div class="menu-icon__outer-wrapper">
+        <div class="menu-icon__inner-wrapper">
+            <div class="menu-icon__open">
+                <h5>
+                    <span class="icon-arrow-left"></span>
+                    menu
+                </h5>
+            </div>
+
+            <div class="menu-icon__close">
+                <h5>
+                    close
+                    <span class="icon-arrow-right"></span>
+                </h5>
+            </div>
+        </div>
+    </div>
+
+
+    <ul class="nav-list">
+        <li class="nav-list__item"></li>
+    </ul>
+
+    <ul class="nav__social-links">
+        <li class="social-links__link">
+            <a href="https://www.facebook.com/luton.celtic" target="_blank"><i class="icon-social-facebook"></i></a>
+        </li>
+    </ul>
+</header>

@@ -1,6 +1,10 @@
 {% extends "base.nunjucks" %}
 
 {% block content %}
-    <h1 class="outline-font">Luton Celtic Supporters Club</h1>
-    <i class="icon-user"></i>
+    <section class="card hero-card">
+        <img alt='Luton Celtic Club'
+             data-src-base='./img/'
+             data-src='<501:home_hero_mobile.jpg, >500:home_hero.jpg'
+             data-src2x="<501:home_hero_mobile-x2.jpg, >500:home_hero-x2.jpg"/>
+    </section>
 {% endblock %}

@@ -4,6 +4,10 @@ module.exports = function(){
     html: {
       src: './src/**/*.html'
     },
+    img: {
+      src: './src/img/**/*.*',
+      dist: './dist/img/'
+    },
     fonts: {
       src: ['./src/fonts/**/*.*', './node_modules/simple-line-icons/fonts/**/*.*'],
       dist: './dist/fonts/'

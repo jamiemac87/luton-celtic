@@ -16,12 +16,21 @@ define(['jquery', 'events'], function ($, Events) {
   var _setupEventHooks = function () {
     $(document).on(Events.OPEN_MENU, function (e) {
       _onOpenMenu();
-    })
+    });
+
+    $(document).on(Events.CLOSE_MENU, function (e) {
+      _onCloseMenu();
+    });
   };
 
   var _onOpenMenu = function () {
     _body && _body.addClass('stop-scroll');
     _mainContent && _mainContent.find('.main-content__overlay').addClass('is-visible');
+  };
+
+  var _onCloseMenu = function () {
+    _body && _body.removeClass('stop-scroll');
+    _mainContent && _mainContent.find('.main-content__overlay').removeClass('is-visible');
   };
 
   return {

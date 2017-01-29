@@ -21,17 +21,13 @@ header{
 
 
 .header__logo-wrapper {
-  width: 55px;
+  width: 80px;
 
   @include breakpoint($medium) {
     display: table-cell;
-    width: 10%;
+    width: 100px;
     padding-right: 15px;
     vertical-align: middle;
-  }
-
-  @include breakpoint($large) {
-    width: 7%;
   }
 }
 

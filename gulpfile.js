@@ -23,6 +23,14 @@ gulp.task('build-templates', function () {
 });
 
 /**
+ * IMAGES
+ */
+gulp.task('images', function () {
+  return gulp.src(config.img.src)
+    .pipe(gulp.dest(config.img.dist));
+});
+
+/**
  * FONTS
  */
 gulp.task('fonts', function () {
@@ -49,7 +57,7 @@ gulp.task('js-client', function () {
 /**
  * INSTALL-DEP
  */
-gulp.task('install-dep', ['fonts', 'js-vendor']);
+gulp.task('install-dep', ['fonts', 'images', 'js-vendor']);
 
 /**
  * SASS
@@ -78,7 +86,7 @@ gulp.task('serve', ['install-dep', 'build-templates', 'sass', 'js-client'], func
  *
  * Push build to gh-pages
  */
-gulp.task('deploy', ['build-templates', 'sass'], function () {
+gulp.task('deploy', ['install-dep', 'build-templates', 'sass', 'js-client'], function () {
   return gulp.src(config.deploy.dist)
     .pipe(deploy())
 });
