@@ -2,9 +2,10 @@
 
 {% block content %}
     <section class="card hero-card">
-        <img alt='Luton Celtic Club'
-             data-src-base='./img/'
-             data-src='<501:home_hero_mobile.jpg, >500:home_hero.jpg'
-             data-src2x="<501:home_hero_mobile-x2.jpg, >500:home_hero-x2.jpg"/>
+        <picture>
+            <source media="(max-width: 500px)" srcset="./img/home_hero_mobile.jpg, ./img/home_hero_mobile-x2.jpg 2x">
+            <source media="(min-width: 501px)" srcset="./img/home_hero.jpg, ./img/home_hero-x2.jpg 2x">
+            <img src="./img/home_hero-x2.jpg" alt="L.C.S.C">
+        </picture>
     </section>
 {% endblock %}

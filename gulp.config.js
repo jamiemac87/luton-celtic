@@ -14,7 +14,7 @@ module.exports = function(){
     },
     jsVendor: {
       src: [
-        './node_modules/responsive-img/responsive-img.min.js',
+        './node_modules/picturefill/dist/picturefill.min.js',
         './node_modules/jquery/dist/jquery.min.js',
         './node_modules/requirejs/require.js'
       ],

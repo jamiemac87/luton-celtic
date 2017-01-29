@@ -7,7 +7,8 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Luton Celtic Supporters Club</title>
 
-    <script src="./js/vendor/require.js" data-main="./js/client/init"></script>
+    <script async src="./js/vendor/picturefill.min.js"></script>
+    <script async src="./js/vendor/require.js" data-main="./js/client/init"></script>
     <link rel="stylesheet" href="./css/main.css">
 </head>
 <body>
@@ -20,6 +21,5 @@
     {% include "footer.nunjucks" %}
     <div class="main-content__overlay"></div>
 </section>
-<script src="./js/vendor/responsive-img.min.js"></script>
 </body>
 </html>
