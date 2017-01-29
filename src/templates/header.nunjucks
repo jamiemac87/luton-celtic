@@ -3,23 +3,23 @@
     <img class="header__logo-wrapper" src="./img/badge.svg" alt="L.C.S.C">
 
     {# menu link -- <992px Only#}
-    <div class="menu-icon__outer-wrapper">
-        <div class="menu-icon__inner-wrapper">
-            <div class="menu-icon__open">
-                <h5>
-                    <span class="icon-arrow-left"></span>
-                    menu
-                </h5>
-            </div>
+    {#<div class="menu-icon__outer-wrapper">#}
+        {#<div class="menu-icon__inner-wrapper">#}
+            {#<div class="menu-icon__open">#}
+                {#<h5>#}
+                    {#<span class="icon-arrow-left"></span>#}
+                    {#menu#}
+                {#</h5>#}
+            {#</div>#}
 
-            <div class="menu-icon__close">
-                <h5>
-                    close
-                    <span class="icon-arrow-right"></span>
-                </h5>
-            </div>
-        </div>
-    </div>
+            {#<div class="menu-icon__close">#}
+                {#<h5>#}
+                    {#close#}
+                    {#<span class="icon-arrow-right"></span>#}
+                {#</h5>#}
+            {#</div>#}
+        {#</div>#}
+    {#</div>#}
 
 
     <ul class="nav-list">
