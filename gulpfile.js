@@ -55,9 +55,17 @@ gulp.task('js-client', function () {
 });
 
 /**
+ * CNAME
+ */
+gulp.task('cname', function () {
+  return gulp.src('./CNAME')
+    .pipe(gulp.dest(config.dist));
+});
+
+/**
  * INSTALL-DEP
  */
-gulp.task('install-dep', ['fonts', 'images', 'js-vendor']);
+gulp.task('install-dep', ['cname', 'fonts', 'images', 'js-vendor']);
 
 /**
  * SASS
