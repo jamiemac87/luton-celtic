@@ -2,8 +2,7 @@ const gulp = require('gulp');
 const deploy = require('gulp-gh-pages');
 const nunjucksRender = require('gulp-nunjucks-render');
 const plumber = require('gulp-plumber');
-const browserSync = require('browser-sync').create();
-const reload = browserSync.reload;
+const browserSync = require('browser-sync').create('my server');
 const sass = require('gulp-sass');
 const concat = require('gulp-concat');
 const rename = require('gulp-rename');
@@ -20,6 +19,7 @@ gulp.task('build-templates', function () {
       path: ['./src/templates']
     }))
     .pipe(gulp.dest('./dist'))
+    .on("end", browserSync.reload);
 });
 
 /**
@@ -84,8 +84,8 @@ gulp.task('serve', ['install-dep', 'build-templates', 'sass', 'js-client'], func
     }
   });
 
-  gulp.watch('./src/**/*.+(html|nunjucks)', ['build-templates']).on('change', reload);
-  gulp.watch('./src/js/**/*.js', ['js-client']).on('change', reload);
+  gulp.watch('./src/**/*.nunjucks', ['build-templates']);
+  gulp.watch('./src/js/**/*.js', ['js-client']).on('change', browserSync.reload);
   gulp.watch('./src/scss/**/*.scss', ['sass']);
 });
 

@@ -24,19 +24,30 @@
   }
 
   .card__content-title {
+    font-family: $primary-font;
+    text-shadow: 3px 3px 0px #D6E8D6;
     margin-bottom: 0;
     quotes: "“" "”" "‘" "’";
+    font-weight: 900;
+    font-style: normal;
+    text-transform: uppercase;
+    letter-spacing: .2rem;
 
     &:before {
       content: open-quote;
+      font-family: $secondary-font;
     }
 
     &:after {
       content: close-quote;
+      font-family: $secondary-font;
     }
   }
 
-  .card__content-copy {}
+  .card__content-copy {
+    font-family: $secondary-font;
+    line-height: 32px;
+  }
 
   @include breakpoint($medium) {
     img {

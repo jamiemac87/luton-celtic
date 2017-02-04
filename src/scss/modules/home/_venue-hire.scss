@@ -19,28 +19,32 @@
     @include breakpoint($medium) {
       width: 60%;
     }
-
-    @include breakpoint($large) {
-      width: 50%;
-    }
-
   }
 
   .card__content-title {
+    margin: 0;
+    //border-bottom: 5px solid white;
+    color: $white;
+    //text-shadow: 3px 3px 0px white;
+    font-weight: 300;
+    font-style: normal;
+    text-transform: uppercase;
+    letter-spacing: .2rem;
+  }
+
+  .card__content-title + hr {
     display: inline-block;
-    padding-bottom: 10px;
-    border-bottom: 5px solid white;
-    color: white;
+    margin: 20px 0px;
+    border-bottom: 2px solid white;
   }
 
   .card__content-copy {
-    margin-bottom: 15px;
+    margin-bottom: 30px;
     font-weight: 300;
     color: white;
-    line-height: 20px;
-    letter-spacing: 1px;
-    font-family: $secondary-font;
-    font-style: italic;
+    line-height: 28px;
+    letter-spacing: 2px;
+    font-family: $primary-font;
     font-weight: 300;
   }
 

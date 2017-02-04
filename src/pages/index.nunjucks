@@ -8,4 +8,38 @@
             <img src="./img/home_hero-x2.jpg" alt="L.C.S.C">
         </picture>
     </section>
+
+    <section class="card default-card -no-border venue-hire-card ">
+        <picture class="default-card__img">
+            <source media="(max-width: 500px)" srcset="./img/venue-card-mobile.jpg, ./img/venue-card-mobile-x2.jpg 2x">
+            <source media="(min-width: 501px)" srcset="./img/venue-card.jpg, ./img/venue-card-x2.jpg 2x">
+            <img src="./img/venue-card-x2.jpg" alt="L.C.S.C - Venue">
+        </picture>
+        <div class="card__content">
+            <h1 class="card__content-title outline-font">venue hire</h1>
+            <hr>
+            <p class="card__content-copy">
+                Our club’s facilities are ideal for birthday, engagement, wedding or anniversary parties or just a get together with family and friends.
+                Our bar can hold 100 guests and our main hall in excess of 200 and we have a licence until 1am.
+                <br><br>
+                If you would like to make a booking please contact us via email below.
+                Alternatively contact Marie Maclaren on telephone number 01582 751675 or the club on 01582 707222
+                You’re guaranteed a warm welcome and a professional, friendly approach.
+            </p>
+            <button class="card__content-btn js-venue-hire-btn">Get in touch</button>
+        </div>
+    </section>
+
+    <section class="card default-card about-card">
+        <img class="default-card__img" src="./img/badge.svg" alt="">
+        <div class="card__content">
+            <h1 class="card__content-title">A club like no other</h1>
+            <hr>
+            <p class="card__content-copy">
+                Our main objective is to support Celtic Football Club and to enjoy the social life that this brings.
+                We are in the heart of Luton’s community, established in 1966 and the opening of our premises in 1977.  You’ll always receive a warm welcome at our club.
+                We have facilities available for weddings, birthday parties and other functions with a main hall that caters for 250 attendees.
+            </p>
+        </div>
+    </section>
 {% endblock %}
