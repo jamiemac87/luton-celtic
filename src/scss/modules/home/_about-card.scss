@@ -1,9 +1,14 @@
 .about-card {
-  background-color: $white;
+  background-color: $alt-green;
 
-  img {
+  .default-card__img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    height: 100%;
     width: 200px;
-    opacity: .2;
+    opacity: .6;
+    @include transform(translate(-50%, -50%));
   }
 
   hr {
@@ -25,7 +30,7 @@
 
   .card__content-title {
     font-family: $primary-font;
-    text-shadow: 3px 3px 0px #D6E8D6;
+    text-shadow: 2px 2px 0px $green;
     margin-bottom: 0;
     quotes: "“" "”" "‘" "’";
     font-weight: 900;
