@@ -1544,12 +1544,21 @@ footer::after {
 }
 
 .about-card {
-  background-color: #FBFBFB;
+  background-color: #EEF8EF;
 }
 
-.about-card img {
+.about-card .default-card__img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  height: 100%;
   width: 200px;
-  opacity: .2;
+  opacity: .6;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
 }
 
 .about-card hr {
@@ -1571,7 +1580,7 @@ footer::after {
 
 .about-card .card__content-title {
   font-family: "Lato", sans-serif;
-  text-shadow: 3px 3px 0px #D6E8D6;
+  text-shadow: 3px 3px 0px #ADCFAB;
   margin-bottom: 0;
   quotes: "“" "”" "‘" "’";
   font-weight: 900;
