@@ -970,14 +970,16 @@ body.stop-scroll {
 
 .default-card__img {
   position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 100%;
-  -webkit-transform: translate(-50%, -50%);
-  -moz-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  -o-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
+  top: 0;
+  left: 0;
+  height: 100%;
+}
+
+@media (min-width: 400px) {
+  .default-card__img {
+    width: 100%;
+    height: inherit;
+  }
 }
 
 .card__content {
@@ -1501,6 +1503,10 @@ footer::after {
   .venue-hire-card .card__content {
     width: 60%;
   }
+}
+
+.venue-hire-card .default-card__img img {
+  height: 100%;
 }
 
 .venue-hire-card .card__content-title {
