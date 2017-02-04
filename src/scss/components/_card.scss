@@ -37,11 +37,14 @@
 
 .default-card__img {
   position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 100%;
-  @include transform(translate(-50%, -50%));
-
+  top: 0;
+  left: 0;
+  height: 100%;
+  //@include transform(translate(-50%, -50%));
+  @include breakpoint($x-small) {
+    width: 100%;
+    height: inherit;
+  }
 }
 
 .card__content {
