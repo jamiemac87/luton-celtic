@@ -1,4 +1,4 @@
-define(['jquery', 'modules/app.module', 'modules/nav.module'], function ($, AppModule, NavModule) {
+define(['jquery', 'modules/app.module', 'modules/nav.module', 'modules/home.module'], function ($, AppModule, NavModule, HomeModule) {
   var args = Array.prototype.slice.call(arguments);
 
   $(document).ready(function () {
