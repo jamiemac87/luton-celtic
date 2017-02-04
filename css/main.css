@@ -1580,7 +1580,7 @@ footer::after {
 
 .about-card .card__content-title {
   font-family: "Lato", sans-serif;
-  text-shadow: 3px 3px 0px #ADCFAB;
+  text-shadow: 2px 2px 0px #ADCFAB;
   margin-bottom: 0;
   quotes: "“" "”" "‘" "’";
   font-weight: 900;
