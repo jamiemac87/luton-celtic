@@ -10,6 +10,21 @@
     <script async src="./js/vendor/picturefill.min.js"></script>
     <script async src="./js/vendor/require.js" data-main="./js/client/init"></script>
     <link rel="stylesheet" href="./css/main.css">
+
+    {# Service Worker #}
+    <script>
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', function() {
+          navigator.serviceWorker.register('/service-worker.js').then(function(registration) {
+            // Registration was successful
+            console.log('ServiceWorker registration successful with scope: ', registration.scope);
+          }).catch(function(err) {
+            // registration failed :(
+            console.log('ServiceWorker registration failed: ', err);
+          });
+        });
+      }
+    </script>
 </head>
 <body>
 {% include "nav.nunjucks" %}

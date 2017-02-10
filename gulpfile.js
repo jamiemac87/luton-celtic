@@ -55,6 +55,14 @@ gulp.task('js-client', function () {
 });
 
 /**
+ * SERVICE-WORKER
+ */
+gulp.task('service-worker', function () {
+  return gulp.src(config.serviceWorker.src)
+    .pipe(gulp.dest(config.serviceWorker.dist));
+});
+
+/**
  * CNAME
  */
 gulp.task('cname', function () {
@@ -65,7 +73,7 @@ gulp.task('cname', function () {
 /**
  * INSTALL-DEP
  */
-gulp.task('install-dep', ['cname', 'fonts', 'images', 'js-vendor']);
+gulp.task('install-dep', ['cname', 'fonts', 'images', 'js-vendor', 'service-worker']);
 
 /**
  * SASS
@@ -85,7 +93,7 @@ gulp.task('serve', ['install-dep', 'build-templates', 'sass', 'js-client'], func
   });
 
   gulp.watch('./src/**/*.nunjucks', ['build-templates']);
-  gulp.watch('./src/js/**/*.js', ['js-client']).on('change', browserSync.reload);
+  gulp.watch('./src/js/**/*.js', ['js-client', 'service-worker']).on('change', browserSync.reload);
   gulp.watch('./src/scss/**/*.scss', ['sass']);
 });
 

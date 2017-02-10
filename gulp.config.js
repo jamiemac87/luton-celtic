@@ -24,6 +24,10 @@ module.exports = function(){
       src: './src/js/client/**/*.js',
       dist: './dist/js/client/'
     },
+    serviceWorker: {
+      src: './src/js/service-workers/service-worker.js',
+      dist: './dist'
+    },
     scss: {
       src: './src/scss/**/*.scss',
       dist: './dist/css/',
